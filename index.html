@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,168 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
-        }
-        h1 {
             color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            background: #555;
+            color: #fff;
+            padding: 10px 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #f4f4f4;
+            padding-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .skill {
+            flex-basis: 30%;
+            margin: 10px 0;
+            background: #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .projects, .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .project, .contact-item {
+            background: #ddd;
+            padding: 15px;
+            border-radius: 5px;
         }
     </style>
 </head>
-<body>
-    <h1>Hello, World!</h1>
-</body>
-</html>
 
+<body>
+    <header>
+        <h1>Welcome to My Personal Webpage</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! I’m [Your Name], an electrical and computer engineering student with a passion for audio signal processing, music production, and VST development. I enjoy creating innovative solutions at the intersection of technology and music.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill">
+                    <h3>Programming Languages</h3>
+                    <p>C++, Verilog, Python, JavaScript</p>
+                </div>
+                <div class="skill">
+                    <h3>Tools & Technologies</h3>
+                    <p>React Native, Git, VST Development, Audio Signal Processing</p>
+                </div>
+                <div class="skill">
+                    <h3>Areas of Expertise</h3>
+                    <p>Music Production, Audio-Visual Synchronization, Computational Models</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Project 1: [Project Name]</h3>
+                    <p>Description of the project, your role, technologies used, and any relevant links (e.g., GitHub repository, live demo).</p>
+                </div>
+                <div class="project">
+                    <h3>Project 2: [Project Name]</h3>
+                    <p>Description of the project, your role, technologies used, and any relevant links (e.g., GitHub repository, live demo).</p>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p>your.email@example.com</p>
+                </div>
+                <div class="contact-item">
+                    <h3>LinkedIn</h3>
+                    <p><a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn Profile</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>GitHub</h3>
+                    <p><a href="https://github.com/yourusername" target="_blank">GitHub Profile</a></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
