@@ -5,214 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cameron Hardin's Personal Webpage</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            background-color: #f0f0f0;
-            color: #333;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-
-        header {
-            background-color: #2c3e50;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        nav {
-            background: #34495e;
-            color: #fff;
-            padding: 15px 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #f39c12;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        section {
-            margin: 50px 0;
-        }
-
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #f4f4f4;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .skill {
-            flex-basis: 30%;
-            margin: 15px 0;
-            padding: 15px;
-            background: #ecf0f1;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .skill h3 {
-            margin-bottom: 10px;
-            color: #34495e;
-        }
-
-        .skill p {
-            margin: 0;
-        }
-
-        .projects,
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .project,
-        .contact-item {
-            background: #ecf0f1;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .project:hover,
-        .contact-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .contact-item a {
-            color: #34495e;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .contact-item a:hover {
-            color: #f39c12;
-        }
-
-        footer {
-            background-color: #2c3e50;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 50px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .skills {
-                flex-direction: column;
-            }
-
-            .skill {
-                flex-basis: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-        <h1>Cameron Hardin's Personal Webpage</h1>
+        <h1>Welcome to Cameron Hardin's Personal Webpage</h1>
     </header>
 
     <nav>
-        <a href="#about">About Me</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="about.html">About Me</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
     </nav>
 
     <div class="container">
-        <!-- About Me Section -->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                Hello! I’m Cameron Hardin, an electrical and computer engineering student with a passion for emerging computational frameworks, audio signal processing, and music production.
-            </p>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="skills">
-                <div class="skill">
-                    <h3>Programming Languages</h3>
-                    <p>C++, Python, JavaScript</p>
-                </div>
-                <div class="skill">
-                    <h3>Tools & Technologies</h3>
-                    <p>React Native, Expo, Git, MATLAB</p>
-                </div>
-                <div class="skill">
-                    <h3>Areas of Expertise</h3>
-                    <p>Music Production, Audio-Visual Synchronization, Computational Models</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="projects">
-                <div class="project">
-                    <h3>Project 1: [Project Name]</h3>
-                    <p>Description of the project, your role, technologies used, and any relevant links (e.g., GitHub repository, live demo).</p>
-                </div>
-                <div class="project">
-                    <h3>Project 2: [Project Name]</h3>
-                    <p>Description of the project, your role, technologies used, and any relevant links (e.g., GitHub repository, live demo).</p>
-                </div>
-                <!-- Add more projects as needed -->
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>Email</h3>
-                    <p><a href="mailto:camhardin@duck.com">camhardin@duck.com</a></p>
-                </div>
-                <div class="contact-item">
-                    <h3>LinkedIn</h3>
-                    <p><a href="https://www.linkedin.com/in/cameron-hardin-0b2995264" target="_blank">LinkedIn Profile</a></p>
-                </div>
-                <div class="contact-item">
-                    <h3>GitHub</h3>
-                    <p><a href="https://github.com/CamKHardin" target="_blank">GitHub Profile</a></p>
-                </div>
-            </div>
+        <section>
+            <h2>Introduction</h2>
+            <p>Hello! I’m Cameron Hardin, an electrical and computer engineering student passionate about signal processing, audio, and emerging computational frameworks. Explore my website to learn more about my skills, projects, and how to get in touch!</p>
         </section>
     </div>
 
