@@ -1,0 +1,17 @@
+# Allow all user agents to crawl the site
+User-agent: *
+Disallow:
+
+# Sitemap URL for better SEO
+# Sitemap: https://camkhardin.github.io/sitemap.xml
+
+# Optional: Disallow specific folders or files if you want to exclude them from indexing
+# Disallow: /private/
+
+# Optional: Prevent search engines from indexing certain file types (like PDFs, DOCs, etc.)
+# Disallow: /*.pdf$
+# Disallow: /*.doc$
+
+# Ensure all crawlers can access important resources like CSS, JS files
+Allow: /*.css$
+Allow: /*.js$
