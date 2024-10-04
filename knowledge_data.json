@@ -1,0 +1,813 @@
+[
+    {
+        "file_name": "Forms of Interpolating Polynomial.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/8.1-8.3 Forms of Interpolating Polynomial.md",
+        "headers": [
+            "Lagrange Form",
+            "Newton Form"
+        ]
+    },
+    {
+        "file_name": "VQE Variational Quantum Eigensolver.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/VQE Variational Quantum Eigensolver.md",
+        "headers": [
+            "Parametric Quantum Circuit and Ansatz in VQE",
+            "Ansatz Circuit in VQE",
+            "VQE Process Overview"
+        ]
+    },
+    {
+        "file_name": "Untitled.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/Untitled.md",
+        "headers": [
+            "Supercomputers and Python:",
+            "Why C++ is Better for Long-Term HPC in Molecular QCA:",
+            "Conclusion:"
+        ]
+    },
+    {
+        "file_name": "Py folder test.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/Py folder test.md",
+        "headers": [
+            "Variable Assignment",
+            "Print the values of x, y, and z. The formatting for z ({z:5.3f})",
+            "ensures that the value of z is displayed with 3 decimal places",
+            "and at least 5 characters wide (including the decimal point).",
+            "Define home and target directories",
+            "Define the job name",
+            "Locate the 'pdflatex' command",
+            "Define the LaTeX script",
+            "Change directory to target",
+            "Form the command to execute pdflatex",
+            "Clean up generated auxiliary files"
+        ]
+    },
+    {
+        "file_name": "Potential Interview Questions.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/Potential Interview Questions.md",
+        "headers": [
+            "Tell me ab yourself",
+            "What are your strengths:",
+            "Weaknesses:",
+            "Favorite course:",
+            "Tell me about a time that you failed:",
+            "Tell me about a time that you led other people to do something:",
+            "What type of things energize you",
+            "What things suck the life out of you",
+            "What do you want to do with your degree",
+            "Why are you interested in our company",
+            "Name a time you got negative feedback",
+            "How do you spend your free time"
+        ]
+    },
+    {
+        "file_name": "Phase Equivalence, Ansatz Circuits.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/3.3-4 Phase Equivalence, Ansatz Circuits.md",
+        "headers": [
+            "Phase Equivalence"
+        ]
+    },
+    {
+        "file_name": "laplace example table 1.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/12 Signals & Systems/laplace example table 1.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Inpulse response of second-order LCCDEs.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/12 Signals & Systems/2.8 Inpulse response of second-order LCCDEs.md",
+        "headers": [
+            "Second order LCCDEs"
+        ]
+    },
+    {
+        "file_name": "Convolution.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/12 Signals & Systems/2.4-2.5 Convolution.md",
+        "headers": [
+            "The Convolution Integral (2.4)",
+            "Properties (2.5)"
+        ]
+    },
+    {
+        "file_name": "Convolution properties Table.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/12 Signals & Systems/Convolution properties Table.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Linear time-invariant systems.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/12 Signals & Systems/2.1 Linear time-invariant systems.md",
+        "headers": [
+            "Properties",
+            "Time Invariance"
+        ]
+    },
+    {
+        "file_name": "Poles & Stability.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/12 Signals & Systems/3.10 Poles & Stability.md",
+        "headers": [
+            "BIBO Stability",
+            "Invertibility"
+        ]
+    },
+    {
+        "file_name": "Signal Transformations.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/12 Signals & Systems/1.2 Signal Transformations.md",
+        "headers": [
+            "Time Shift",
+            "Time Scaling",
+            "Time Reversal",
+            "Combined Transforms",
+            "Order of Operations:"
+        ]
+    },
+    {
+        "file_name": "Nonperiodic waveforms.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/12 Signals & Systems/1.4 Nonperiodic waveforms.md",
+        "headers": [
+            "Unit step function",
+            "Graph:",
+            "Unit time-reversed step function",
+            "Unit ramp function",
+            "Unit time-shifted ramp function",
+            "Triangle pulse waveform (synthesized from ramps)",
+            "Rectangular pulse function",
+            "Impulse function",
+            "Sampling (sifting) Property",
+            "Exponential"
+        ]
+    },
+    {
+        "file_name": "Waveform Properties.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/12 Signals & Systems/1.3 Waveform Properties.md",
+        "headers": [
+            "Symmetry",
+            "Periodicity"
+        ]
+    },
+    {
+        "file_name": "Signal Power & Energy.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/12 Signals & Systems/1.5 Signal Power & Energy.md",
+        "headers": [
+            "Three Classes of Signals:",
+            "Power signals",
+            "Energy signals",
+            "Power in a sinusoid"
+        ]
+    },
+    {
+        "file_name": "Laplace example table 2.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/12 Signals & Systems/Laplace example table 2.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Laplace Transform Properties (causal) table.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/12 Signals & Systems/Laplace Transform Properties (causal) table.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "The (unilateral) Laplace transform.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/12 Signals & Systems/3.1 The (unilateral) Laplace transform.md",
+        "headers": [
+            "Laplace Transform",
+            "Uniqueness Property",
+            "Convergence Condition",
+            "Inverse Laplace Transform",
+            "Common Transforms",
+            "Poles & zeros",
+            "Properties",
+            "Initial-value Theorem",
+            "Final-value Theorem",
+            "Property Table for causal functions"
+        ]
+    },
+    {
+        "file_name": "Operation Counts, Gaussian Elimination, LU Factorization.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/09 Numerical Methods/5,6,7.0 Operation Counts, Gaussian Elimination, LU Factorization.md",
+        "headers": [
+            "Operation Counts",
+            "Gaussian Elimination",
+            "Steps",
+            "Operation Count",
+            "Pivoting",
+            "Limitations",
+            "LU Factorization",
+            "Steps",
+            "Operation Count",
+            "Advantages",
+            "Requirements"
+        ]
+    },
+    {
+        "file_name": "Taylors Theorem.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/09 Numerical Methods/4.2 Taylors Theorem.md",
+        "headers": [
+            "Common Taylor Series",
+            "Basic Forms:",
+            "Examples: (with a = 0)"
+        ]
+    },
+    {
+        "file_name": "Bisection.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/09 Numerical Methods/4.1 Bisection.md",
+        "headers": [
+            "Bijection Method for solving nonlinear equations"
+        ]
+    },
+    {
+        "file_name": "Polynomial Interpolation.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/09 Numerical Methods/8.3-> Polynomial Interpolation.md",
+        "headers": [
+            "Power Polynomials",
+            "Lagrange form of the Interpolating Polynomial"
+        ]
+    },
+    {
+        "file_name": "Newtons Method.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/09 Numerical Methods/4.3 Newtons Method.md",
+        "headers": [
+            "Newton's Method in Numerical Methods",
+            "Overview:",
+            "Formula:",
+            "Steps:",
+            "Convergence:",
+            "Iteration 1:",
+            "Iteration 2:"
+        ]
+    },
+    {
+        "file_name": "Bisection & Taylors.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/09 Numerical Methods/Handwritten Num Meth Notes/Bisection & Taylors.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Newtons Method.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/09 Numerical Methods/Handwritten Num Meth Notes/Newtons Method.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Matrix Conditioning & error.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/09 Numerical Methods/Handwritten Num Meth Notes/8.1 Matrix Conditioning & error.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Operation Counts, Gaussian Elimination, LU Factorization.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/09 Numerical Methods/Handwritten Num Meth Notes/Operation Counts, Gaussian Elimination, LU Factorization.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Norms & Conditioning of Linear Systems.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/09 Numerical Methods/Handwritten Num Meth Notes/Norms & Conditioning of Linear Systems.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Matrix Condition Numbers.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/09 Numerical Methods/Handwritten Num Meth Notes/Matrix Condition Numbers.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Full & Partial Pivoting.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/09 Numerical Methods/Handwritten Num Meth Notes/Full & Partial Pivoting.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Rounding & Error.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/09 Numerical Methods/Handwritten Num Meth Notes/Rounding & Error.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Newtons and Secant Methods.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/09 Numerical Methods/Handwritten Num Meth Notes/Newtons and Secant Methods.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Ch8 Polynomial Interpolation.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/09 Numerical Methods/Handwritten Num Meth Notes/Ch8 Polynomial Interpolation.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Taylors theorem & approximations.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/09 Numerical Methods/Handwritten Num Meth Notes/Taylors theorem & approximations.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "stl Libraries.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/02 C++/stl Libraries.md",
+        "headers": [
+            "C++ Standard Libraries",
+            "Mathematics and Random Number Generation",
+            "Concurrency and Synchronization",
+            "Time and Date",
+            "Data Structures and Containers",
+            "Input/Output and Filesystem",
+            "Regular Expressions and Text Processing",
+            "Utilities and Functional Programming",
+            "Error Handling and Exceptions",
+            "Memory Management",
+            "Mathematics and Numerics",
+            "Type Traits and Metaprogramming",
+            "Networking and Asynchronous Programming",
+            "Mathematical Special Functions",
+            "Advanced Programming",
+            "Localization",
+            "Other Useful Headers",
+            "Extended Utility Libraries"
+        ]
+    },
+    {
+        "file_name": "std_chrono.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/02 C++/Chrono/std_chrono.md",
+        "headers": [
+            "A date and time library"
+        ]
+    },
+    {
+        "file_name": "std_algorithm.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/02 C++/Algorithm/std_algorithm.md",
+        "headers": [
+            "Non-Modifying Sequence Operations",
+            "Batch Operations",
+            "Search Operations",
+            "Fold Operations",
+            "Modifying Sequence Operations",
+            "Numeric Operations",
+            "Sorting & Related Operations"
+        ]
+    },
+    {
+        "file_name": "for_each.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/02 C++/Algorithm/Non-Modifying/Batch Operations/for_each.md",
+        "headers": [
+            "std::for_each",
+            "std::for_each_n"
+        ]
+    },
+    {
+        "file_name": "std_mutex.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/02 C++/Mutex/std_mutex.md",
+        "headers": [
+            "Contents",
+            "Usage"
+        ]
+    },
+    {
+        "file_name": "std_recursive_mutex.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/02 C++/Mutex/std_recursive_mutex.md",
+        "headers": [
+            "Usage"
+        ]
+    },
+    {
+        "file_name": "std_try_lock.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/02 C++/Mutex/std_try_lock.md",
+        "headers": [
+            "Usage"
+        ]
+    },
+    {
+        "file_name": "std_unique lock.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/02 C++/Mutex/std_unique lock.md",
+        "headers": [
+            "Usage"
+        ]
+    },
+    {
+        "file_name": "std_timed_mutex.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/02 C++/Mutex/std_timed_mutex.md",
+        "headers": [
+            "Usage"
+        ]
+    },
+    {
+        "file_name": "std_lock_guard.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/02 C++/Mutex/std_lock_guard.md",
+        "headers": [
+            "Benefits"
+        ]
+    },
+    {
+        "file_name": "MIPSzy Register Encodings.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/11 Microprocessors/MIPSzy Register Encodings.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "MIPSzy Machine Instructions.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/11 Microprocessors/MIPSzy Machine Instructions.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Instruction Sets.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/11 Microprocessors/1.1-1.2 Instruction Sets.md",
+        "headers": [
+            "Instruction Set Architecture (ISA)",
+            "CISC vs RISC"
+        ]
+    },
+    {
+        "file_name": "MIPSzy.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/11 Microprocessors/1.3-1.10 MIPSzy.md",
+        "headers": [
+            "MIPS ISA",
+            "MIPSzy",
+            "Loading & Storing",
+            "Memory Alignment",
+            "Endianness",
+            "Program Counter (PC)",
+            "Instructions (Commands)",
+            "addi",
+            "add",
+            "beq",
+            "bne",
+            "j (jump)",
+            "slt",
+            "Pseudoinstructions"
+        ]
+    },
+    {
+        "file_name": "Machine instructions.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/11 Microprocessors/2.5 Machine instructions.md",
+        "headers": [
+            "Machine Instruction",
+            "MIPSzy Register Encodings",
+            "MIPSzy Machine Instructions"
+        ]
+    },
+    {
+        "file_name": "Subroutines & Program Stack.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/11 Microprocessors/2.1-2.4 Subroutines & Program Stack.md",
+        "headers": [
+            "Subroutines",
+            "jal (Jump and Link)",
+            "jr (jump register)",
+            "Program Stack"
+        ]
+    },
+    {
+        "file_name": "Overview.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/07 Bash/Overview.md",
+        "headers": [
+            "The default I/O shell for linux systems",
+            "Setup:",
+            "Changing Permissions:",
+            "Structure:",
+            "Variables:",
+            "Environment Variables are all caps:",
+            "means Everything",
+            "Math:",
+            "If Statements:",
+            "Exit Codes:",
+            "Redirects:",
+            "While Loops:"
+        ]
+    },
+    {
+        "file_name": "git diff.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/03 Git/git diff.md",
+        "headers": [
+            "git diff`"
+        ]
+    },
+    {
+        "file_name": "git add.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/03 Git/git add.md",
+        "headers": [
+            "git add`"
+        ]
+    },
+    {
+        "file_name": "git log.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/03 Git/git log.md",
+        "headers": [
+            "git log`"
+        ]
+    },
+    {
+        "file_name": "git checkout.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/03 Git/git checkout.md",
+        "headers": [
+            "git checkout`"
+        ]
+    },
+    {
+        "file_name": "git push.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/03 Git/git push.md",
+        "headers": [
+            "git push`"
+        ]
+    },
+    {
+        "file_name": "git clone.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/03 Git/git clone.md",
+        "headers": [
+            "git clone`"
+        ]
+    },
+    {
+        "file_name": "git merge.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/03 Git/git merge.md",
+        "headers": [
+            "git merge`"
+        ]
+    },
+    {
+        "file_name": "git pull.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/03 Git/git pull.md",
+        "headers": [
+            "git pull`"
+        ]
+    },
+    {
+        "file_name": "git reset.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/03 Git/git reset.md",
+        "headers": [
+            "git reset`"
+        ]
+    },
+    {
+        "file_name": "git commit.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/03 Git/git commit.md",
+        "headers": [
+            "git commit`"
+        ]
+    },
+    {
+        "file_name": "git branch.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/03 Git/git branch.md",
+        "headers": [
+            "git branch`"
+        ]
+    },
+    {
+        "file_name": "Flags.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/03 Git/Flags.md",
+        "headers": [
+            "General Flags",
+            "Global Flags",
+            "Output Formatting Flags"
+        ]
+    },
+    {
+        "file_name": "Basic Commands.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/03 Git/Basic Commands.md",
+        "headers": [
+            "General Git Commands",
+            "Remote Repositories",
+            "Help with Git Commands"
+        ]
+    },
+    {
+        "file_name": "git remote.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/03 Git/git remote.md",
+        "headers": [
+            "git remote`"
+        ]
+    },
+    {
+        "file_name": "git stash.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/03 Git/git stash.md",
+        "headers": [
+            "git stash`"
+        ]
+    },
+    {
+        "file_name": "EM, Maxwell, Waves, Coulombs Law.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/08 Electromagnetic Fields/EM, Maxwell, Waves, Coulombs Law.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Maxwells Equations.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/08 Electromagnetic Fields/Maxwells Equations.md",
+        "headers": [
+            "Electric Flux",
+            "Magnetic Flux",
+            "Time Varying"
+        ]
+    },
+    {
+        "file_name": "Flux Density.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/08 Electromagnetic Fields/Flux Density.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Infinite line charges.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/08 Electromagnetic Fields/Infinite line charges.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Field Sheets of Charge.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/08 Electromagnetic Fields/2.5 Field Sheets of Charge.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Coordinate Systems.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/08 Electromagnetic Fields/Coordinate Systems.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Flux Density, Gauss\u2019 law, Divergence.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/08 Electromagnetic Fields/Flux Density, Gauss\u2019 law, Divergence.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Spherical & Cylindrical coordinates.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/08 Electromagnetic Fields/Spherical & Cylindrical coordinates.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Triple Integrals.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/08 Electromagnetic Fields/Triple Integrals.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Field Due to Continuous Volume Charge Distribution.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/08 Electromagnetic Fields/2.3 Field Due to Continuous Volume Charge Distribution.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Coulombs Law.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/08 Electromagnetic Fields/Coulombs Law.md",
+        "headers": [
+            "General Formula",
+            "Specific Formula"
+        ]
+    },
+    {
+        "file_name": "Map of Philosophy.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/10 Ethics/Map of Philosophy.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "Engineering Definition & Uncertainty.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/10 Ethics/Engineering Definition & Uncertainty.md",
+        "headers": [
+            "Engineering:",
+            "Koen\u2019s Definition:",
+            "Thomas\u2019 Adaptation:",
+            "Reason",
+            "Science",
+            "Vernacular",
+            "Plato",
+            "Examples",
+            "Phila-sophia"
+        ]
+    },
+    {
+        "file_name": "Communism & Libertarianism.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/10 Ethics/Communism & Libertarianism.md",
+        "headers": [
+            "Communism",
+            "Libertarianism"
+        ]
+    },
+    {
+        "file_name": "Individualism Vs. Collectivism.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/10 Ethics/Individualism Vs. Collectivism.md",
+        "headers": [
+            "Indivudualist",
+            "Collectivist"
+        ]
+    },
+    {
+        "file_name": "Normative Ethics.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/10 Ethics/Normative Ethics.md",
+        "headers": [
+            "Ethical Egoism",
+            "Religious Ethics"
+        ]
+    },
+    {
+        "file_name": "Classical Info and Operators.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/06 Quantum Research/1-2 Classical Info and Operators.md",
+        "headers": [
+            "Operators",
+            "Example",
+            "Define two quantum states (vectors), |psi> and |phi>",
+            "In quantum computing, these are typically complex vectors in a Hilbert space.",
+            "For simplicity, we use real vectors here, but quantum states are usually complex.",
+            "Inner Product:",
+            "The inner product of two quantum states |psi> and |phi> is <psi|phi>.",
+            "It is a scalar and represents a measure of the \"overlap\" or similarity between two states.",
+            "Outer Product:",
+            "The outer product of |psi> and <phi| is a matrix. It represents how these vectors \"interact.\"",
+            "In quantum computing, the outer product is used to form density matrices or",
+            "to describe certain operations in quantum mechanics.",
+            "Explanation:",
+            "The inner product is a scalar that helps us understand the alignment or",
+            "projection of one quantum state onto another.",
+            "The outer product forms a matrix that can represent a composite quantum state",
+            "or a transformation in quantum computing, often used in describing entanglement",
+            "or applying operators to states.",
+            "Hermitian Conjugate",
+            "Interference",
+            "EXAMPLE",
+            "Initialize a quantum circuit with 1 qubit",
+            "Apply Hadamard gate (H) to qubit in |0\u27e9 state",
+            "Display the state after applying the Hadamard gate once",
+            "Apply a second Hadamard gate (H) to the same qubit",
+            "Display the state after applying the Hadamard gate twice",
+            "Run the quantum circuit and display the output",
+            "Constructive Interference",
+            "Example",
+            "Define two quantum state amplitudes with aligned phases (constructive interference)",
+            "Total amplitude is the sum of the two (they interfere constructively)",
+            "Probability is the square of the magnitude of the amplitude",
+            "Destructive Interference",
+            "IN SUMMARY:**"
+        ]
+    },
+    {
+        "file_name": "The Density Operator.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/06 Quantum Research/2.6 The Density Operator.md",
+        "headers": [
+            "Density Matrix in Quantum Mechanics",
+            "Density Operator",
+            "Density Matrix in QCA"
+        ]
+    },
+    {
+        "file_name": "Quantum scratchwork.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/06 Quantum Research/Quantum scratchwork.md",
+        "headers": [
+            "Text Elements"
+        ]
+    },
+    {
+        "file_name": "All Python expressions.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/06 Quantum Research/All Python expressions.md",
+        "headers": [
+            "DEFINE KETS",
+            "DEFINE PAULI OPERATORS",
+            "Define Hadamard transform",
+            "sqrt(2) * (X + Z)",
+            "Define Hamiltonian",
+            "Define Delta and gamma",
+            "Define Kink",
+            "Define fundamental electron charge",
+            "Define permittivity of free space (epsilon_0)",
+            "Define cell size",
+            "Calculate Kink (bitflip energy)"
+        ]
+    },
+    {
+        "file_name": "Hamiltonians & Eigenenergies.md",
+        "file_path": "/Users/cameronhardin/Desktop/Obsidian Notes/06 Quantum Research/2.5 Hamiltonians & Eigenenergies.md",
+        "headers": [
+            "Hamiltonians",
+            "Expectation Values",
+            "Next: learn about Polarization P (page 30 mention)\u2019",
+            "Kink (Bit flip energy)"
+        ]
+    }
+]
