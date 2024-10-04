@@ -23,6 +23,9 @@
         .hidden {
             display: none;
         }
+        .error-message {
+            color: red;
+        }
     </style>
 </head>
 
@@ -44,7 +47,7 @@
         <input type="text" id="searchBar" placeholder="Search the Knowledge Base...">
         <section id="knowledge">
             <h2>Knowledge Base</h2>
-            <div id="knowledge-content"></div> <!-- This block will hold the fetched knowledge base content -->
+            <div id="knowledge-content">Loading knowledge base...</div> <!-- Block to hold the knowledge base content -->
         </section>
     </div>
 
@@ -54,10 +57,19 @@
 
     <script>
         async function fetchMarkdownFile() {
-            // Fetch the knowledge_base.md file from your GitHub repository
-            const response = await fetch('https://raw.githubusercontent.com/CamKHardin/CamKHardin.github.io/main/knowledge_base.md');
-            const fileContent = await response.text();
-            displayContent(fileContent);
+            try {
+                // Fetch the knowledge_base.md file from your GitHub Pages repository
+                const response = await fetch('https://raw.githubusercontent.com/CamKHardin/CamKHardin.github.io/main/knowledge_base.md');
+                
+                if (!response.ok) {
+                    throw new Error('Markdown file not found or failed to fetch.');
+                }
+
+                const fileContent = await response.text();
+                displayContent(fileContent);
+            } catch (error) {
+                displayError(`Error fetching the Markdown file: ${error.message}`);
+            }
         }
 
         function displayContent(content) {
@@ -69,7 +81,7 @@
         }
 
         function parseMarkdown(content) {
-            // Simple markdown to HTML converter (for rendering in the block)
+            // Simple markdown to HTML converter
             let htmlContent = content
                 .replace(/^# (.*$)/gim, '<h1>$1</h1>')         // H1
                 .replace(/^## (.*$)/gim, '<h2>$1</h2>')        // H2
@@ -98,6 +110,11 @@
                     }
                 }
             });
+        }
+
+        function displayError(message) {
+            const knowledgeContent = document.getElementById('knowledge-content');
+            knowledgeContent.innerHTML = `<p class="error-message">${message}</p>`;
         }
 
         // Fetch and display the markdown content on page load
