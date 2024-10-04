@@ -13,18 +13,21 @@
             margin-bottom: 20px;
             font-size: 16px;
         }
-        #knowledge-content {
-            max-height: 500px;
-            overflow-y: auto;
-            border: 1px solid #ddd;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
         .hidden {
             display: none;
         }
-        .error-message {
-            color: red;
+        .file-section {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .file-section h3 {
+            margin: 0;
+        }
+        .file-section ul {
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -36,7 +39,7 @@
 
     <nav>
         <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
+        <a href="skills.html">Skills</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
         <a href="knowledge.html">Knowledge Base</a>
@@ -45,10 +48,7 @@
     <div class="container">
         <!-- Search bar -->
         <input type="text" id="searchBar" placeholder="Search the Knowledge Base...">
-        <section id="knowledge">
-            <h2>Knowledge Base</h2>
-            <div id="knowledge-content">Loading knowledge base...</div> <!-- Block to hold the knowledge base content -->
-        </section>
+        <section id="knowledge-content"></section> <!-- This will hold the knowledge base content -->
     </div>
 
     <footer>
@@ -56,41 +56,37 @@
     </footer>
 
     <script>
-        async function fetchMarkdownFile() {
-            try {
-                // Fetch the knowledge_base.md file from your GitHub Pages repository
-                const response = await fetch('https://raw.githubusercontent.com/CamKHardin/CamKHardin.github.io/main/knowledge_base.md');
-                
-                if (!response.ok) {
-                    throw new Error('Markdown file not found or failed to fetch.');
-                }
-
-                const fileContent = await response.text();
-                displayContent(fileContent);
-            } catch (error) {
-                displayError(`Error fetching the Markdown file: ${error.message}`);
-            }
+        async function fetchKnowledgeData() {
+            // Fetch the knowledge_data.json file from the Website folder
+            const response = await fetch('knowledge_data.json');
+            const data = await response.json();
+            displayContent(data);
         }
 
-        function displayContent(content) {
+        function displayContent(data) {
             const knowledgeContent = document.getElementById('knowledge-content');
-            const parsedContent = parseMarkdown(content);
-            knowledgeContent.innerHTML = parsedContent;
+            knowledgeContent.innerHTML = ''; // Clear previous content
 
-            enableSearch(); // Call search functionality after rendering
-        }
+            data.forEach(item => {
+                const fileSection = document.createElement('div');
+                fileSection.classList.add('file-section');
 
-        function parseMarkdown(content) {
-            // Simple markdown to HTML converter
-            let htmlContent = content
-                .replace(/^# (.*$)/gim, '<h1>$1</h1>')         // H1
-                .replace(/^## (.*$)/gim, '<h2>$1</h2>')        // H2
-                .replace(/^### (.*$)/gim, '<h3>$1</h3>')       // H3
-                .replace(/^\*\*(.*)\*\*/gim, '<strong>$1</strong>') // Bold
-                .replace(/^- (.*$)/gim, '<li>$1</li>')         // List items
-                .replace(/\n/gim, '<br />');                   // New line to <br>
+                const fileName = document.createElement('h3');
+                fileName.textContent = item.file_name;
 
-            return `<ul>${htmlContent}</ul>`;
+                const headersList = document.createElement('ul');
+                item.headers.forEach(header => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = header;
+                    headersList.appendChild(listItem);
+                });
+
+                fileSection.appendChild(fileName);
+                fileSection.appendChild(headersList);
+                knowledgeContent.appendChild(fileSection);
+            });
+
+            enableSearch(); // Enable search functionality after rendering content
         }
 
         // Search functionality
@@ -98,27 +94,21 @@
             const searchBar = document.getElementById('searchBar');
             searchBar.addEventListener('input', function() {
                 const filter = searchBar.value.toLowerCase();
-                const content = document.getElementById('knowledge-content');
-                const listItems = content.getElementsByTagName('li');
+                const fileSections = document.getElementsByClassName('file-section');
 
-                for (let i = 0; i < listItems.length; i++) {
-                    const text = listItems[i].textContent.toLowerCase();
-                    if (text.includes(filter)) {
-                        listItems[i].classList.remove('hidden');
+                for (let i = 0; i < fileSections.length; i++) {
+                    const sectionText = fileSections[i].textContent.toLowerCase();
+                    if (sectionText.includes(filter)) {
+                        fileSections[i].classList.remove('hidden');
                     } else {
-                        listItems[i].classList.add('hidden');
+                        fileSections[i].classList.add('hidden');
                     }
                 }
             });
         }
 
-        function displayError(message) {
-            const knowledgeContent = document.getElementById('knowledge-content');
-            knowledgeContent.innerHTML = `<p class="error-message">${message}</p>`;
-        }
-
-        // Fetch and display the markdown content on page load
-        fetchMarkdownFile();
+        // Fetch and display the knowledge base data on page load
+        fetchKnowledgeData();
     </script>
 </body>
 </html>
