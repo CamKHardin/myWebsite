@@ -1,68 +1,100 @@
-<section id="knowledge">
-    <h2>Knowledge Base</h2>
-    <ul id="knowledge-list"></ul>
-</section>
-
-<script>
-    async function fetchNotes(path = '') {
-        const repo = 'CamKHardin/Obsidian-Notes';
-        const baseUrl = `https://api.github.com/repos/${repo}/contents/${path}`;
-        const response = await fetch(baseUrl);
-        const files = await response.json();
-        const knowledgeList = document.getElementById('knowledge-list');
-
-        for (const file of files) {
-            if (file.type === 'dir') {
-                // Recursively fetch files in subdirectories
-                await fetchNotes(file.path);
-            } else if (file.name.endsWith('.md')) {
-                const fileResponse = await fetch(file.download_url);
-                const fileContent = await fileResponse.text();
-                
-                const headers = extractHeaders(fileContent);
-
-                // Create list item for each file
-                const listItem = document.createElement('li');
-                listItem.className = 'knowledge-item'; // Class for search filtering
-                listItem.textContent = file.name.replace('.md', '');
-
-                // Create sub-list for the headers (concepts)
-                const subList = document.createElement('ul');
-                headers.forEach(header => {
-                    const subListItem = document.createElement('li');
-                    subListItem.className = 'knowledge-item'; // Class for search filtering
-                    subListItem.textContent = header;
-                    subList.appendChild(subListItem);
-                });
-
-                listItem.appendChild(subList);
-                knowledgeList.appendChild(listItem);
-            }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Base - Cameron Hardin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #searchBar {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
         }
-    }
-
-    // Function to extract headers (lines starting with #, ##, etc.)
-    function extractHeaders(content) {
-        const lines = content.split('\n');
-        const headers = lines.filter(line => line.startsWith('#'));
-        return headers.map(header => header.replace(/#/g, '').trim()); // Remove the '#' and extra spaces
-    }
-
-    // Search functionality
-    document.getElementById('searchBar').addEventListener('input', function() {
-        const filter = this.value.toLowerCase();
-        const items = document.getElementsByClassName('knowledge-item');
-
-        for (let i = 0; i < items.length; i++) {
-            const text = items[i].textContent.toLowerCase();
-            if (text.includes(filter)) {
-                items[i].classList.remove('hidden');
-            } else {
-                items[i].classList.add('hidden');
-            }
+        .hidden {
+            display: none;
         }
-    });
+    </style>
+</head>
 
-    // Fetch the notes from the repository
-    fetchNotes();
-</script>
+<body>
+    <header>
+        <h1>Cameron Hardin's Knowledge Base</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="knowledge.html">Knowledge Base</a>
+    </nav>
+
+    <div class="container">
+        <!-- Search bar -->
+        <input type="text" id="searchBar" placeholder="Search the Knowledge Base...">
+        <section id="knowledge">
+            <h2>Knowledge Base</h2>
+            <div id="knowledge-content"></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Cameron Hardin. All rights reserved.</p>
+    </footer>
+
+    <script>
+        async function fetchMarkdownFile() {
+            // Path to the knowledge_base.md file on GitHub
+            const response = await fetch('https://raw.githubusercontent.com/CamKHardin/CamKHardin.github.io/main/knowledge_base.md');
+            const fileContent = await response.text();
+            displayContent(fileContent);
+        }
+
+        function displayContent(content) {
+            const knowledgeContent = document.getElementById('knowledge-content');
+            const parsedContent = parseMarkdown(content);
+            knowledgeContent.innerHTML = parsedContent;
+
+            enableSearch(); // Call search functionality after rendering
+        }
+
+        function parseMarkdown(content) {
+            // Replace markdown syntax with HTML formatting (simple parser)
+            let htmlContent = content
+                .replace(/^# (.*$)/gim, '<h1>$1</h1>')         // H1
+                .replace(/^## (.*$)/gim, '<h2>$1</h2>')        // H2
+                .replace(/^### (.*$)/gim, '<h3>$1</h3>')       // H3
+                .replace(/^\*\*(.*)\*\*/gim, '<strong>$1</strong>') // Bold
+                .replace(/^- (.*$)/gim, '<li>$1</li>')         // List items
+                .replace(/\n/gim, '<br />');                   // New line to <br>
+
+            return `<ul>${htmlContent}</ul>`;
+        }
+
+        // Search functionality
+        function enableSearch() {
+            const searchBar = document.getElementById('searchBar');
+            searchBar.addEventListener('input', function() {
+                const filter = searchBar.value.toLowerCase();
+                const content = document.getElementById('knowledge-content');
+                const listItems = content.getElementsByTagName('li');
+
+                for (let i = 0; i < listItems.length; i++) {
+                    const text = listItems[i].textContent.toLowerCase();
+                    if (text.includes(filter)) {
+                        listItems[i].classList.remove('hidden');
+                    } else {
+                        listItems[i].classList.add('hidden');
+                    }
+                }
+            });
+        }
+
+        // Fetch and display the markdown content on page load
+        fetchMarkdownFile();
+    </script>
+</body>
+</html>
