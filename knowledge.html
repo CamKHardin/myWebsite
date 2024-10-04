@@ -1,108 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knowledge Base - Cameron Hardin</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        #searchBar {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            font-size: 16px;
-        }
-        .hidden {
-            display: none;
-        }
-    </style>
-</head>
+<section id="knowledge">
+    <h2>Knowledge Base</h2>
+    <ul id="knowledge-list"></ul>
+</section>
 
-<body>
-    <header>
-        <h1>Cameron Hardin's Knowledge Base</h1>
-    </header>
+<script>
+    async function fetchNotes(path = '') {
+        const repo = 'CamKHardin/Obsidian-Notes';
+        const baseUrl = `https://api.github.com/repos/${repo}/contents/${path}`;
+        const response = await fetch(baseUrl);
+        const files = await response.json();
+        const knowledgeList = document.getElementById('knowledge-list');
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-        <a href="knowledge.html">Knowledge Base</a> <!-- Link to the knowledge base tab -->
-    </nav>
+        for (const file of files) {
+            if (file.type === 'dir') {
+                // Recursively fetch files in subdirectories
+                await fetchNotes(file.path);
+            } else if (file.name.endsWith('.md')) {
+                const fileResponse = await fetch(file.download_url);
+                const fileContent = await fileResponse.text();
+                
+                const headers = extractHeaders(fileContent);
 
-    <div class="container">
-        <input type="text" id="searchBar" placeholder="Search for concepts or file names...">
+                // Create list item for each file
+                const listItem = document.createElement('li');
+                listItem.className = 'knowledge-item'; // Class for search filtering
+                listItem.textContent = file.name.replace('.md', '');
 
-        <section id="knowledge">
-            <h2>Knowledge Base</h2>
-            <ul id="knowledge-list"></ul>
-        </section>
-    </div>
+                // Create sub-list for the headers (concepts)
+                const subList = document.createElement('ul');
+                headers.forEach(header => {
+                    const subListItem = document.createElement('li');
+                    subListItem.className = 'knowledge-item'; // Class for search filtering
+                    subListItem.textContent = header;
+                    subList.appendChild(subListItem);
+                });
 
-    <footer>
-        <p>&copy; 2024 Cameron Hardin. All rights reserved.</p>
-    </footer>
-
-    <script>
-        async function fetchNotes() {
-            const repo = 'CamKHardin/Obsidian-Notes';
-            const baseUrl = `https://api.github.com/repos/${repo}/contents/`;
-            const response = await fetch(baseUrl);
-            const files = await response.json();
-            const knowledgeList = document.getElementById('knowledge-list');
-
-            files.forEach(async (file) => {
-                if (file.name.endsWith('.md')) { // Check if the file is a markdown file
-                    const fileResponse = await fetch(file.download_url);
-                    const fileContent = await fileResponse.text();
-                    
-                    const headers = extractHeaders(fileContent);
-
-                    // Create list item for each file
-                    const listItem = document.createElement('li');
-                    listItem.className = 'knowledge-item'; // Class for search filtering
-                    listItem.textContent = file.name.replace('.md', '');
-
-                    // Create sub-list for the headers (concepts)
-                    const subList = document.createElement('ul');
-                    headers.forEach(header => {
-                        const subListItem = document.createElement('li');
-                        subListItem.className = 'knowledge-item'; // Class for search filtering
-                        subListItem.textContent = header;
-                        subList.appendChild(subListItem);
-                    });
-
-                    listItem.appendChild(subList);
-                    knowledgeList.appendChild(listItem);
-                }
-            });
-        }
-
-        // Function to extract headers (lines starting with #, ##, etc.)
-        function extractHeaders(content) {
-            const lines = content.split('\n');
-            const headers = lines.filter(line => line.startsWith('#'));
-            return headers.map(header => header.replace(/#/g, '').trim()); // Remove the '#' and extra spaces
-        }
-
-        // Search functionality
-        document.getElementById('searchBar').addEventListener('input', function() {
-            const filter = this.value.toLowerCase();
-            const items = document.getElementsByClassName('knowledge-item');
-
-            for (let i = 0; i < items.length; i++) {
-                const text = items[i].textContent.toLowerCase();
-                if (text.includes(filter)) {
-                    items[i].classList.remove('hidden');
-                } else {
-                    items[i].classList.add('hidden');
-                }
+                listItem.appendChild(subList);
+                knowledgeList.appendChild(listItem);
             }
-        });
+        }
+    }
 
-        fetchNotes();
-    </script>
-</body>
-</html>
+    // Function to extract headers (lines starting with #, ##, etc.)
+    function extractHeaders(content) {
+        const lines = content.split('\n');
+        const headers = lines.filter(line => line.startsWith('#'));
+        return headers.map(header => header.replace(/#/g, '').trim()); // Remove the '#' and extra spaces
+    }
+
+    // Search functionality
+    document.getElementById('searchBar').addEventListener('input', function() {
+        const filter = this.value.toLowerCase();
+        const items = document.getElementsByClassName('knowledge-item');
+
+        for (let i = 0; i < items.length; i++) {
+            const text = items[i].textContent.toLowerCase();
+            if (text.includes(filter)) {
+                items[i].classList.remove('hidden');
+            } else {
+                items[i].classList.add('hidden');
+            }
+        }
+    });
+
+    // Fetch the notes from the repository
+    fetchNotes();
+</script>
